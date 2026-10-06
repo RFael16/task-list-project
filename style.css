@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(65, 184, 131, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.container {
+  border: 2px solid #fff;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.new-task-container {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.new-task-container input {
+  flex: 3;
+  font-size: 1rem;
+  border: 2px solid #d1d3d4;
+  border-radius: 5px;
+  padding: 12px;
+  font-weight: 500;
+  min-width: 0;
+}
+
+.new-task-container input:focus {
+  outline: none;
+  border-color: #41b883;
+}
+
+.new-task-button {
+  flex: 1;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-weight: 500;
+  height: 100%;
+  background-color: #41b883;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.task-container {
+  background-color: #fff;
+  margin-top: 60px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.task-item p {
+  cursor: pointer;
+  flex: 1;
+  word-break: break-word;
+}
+
+.task-item i {
+  background-color: #41b883;
+  color: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.task-item i:hover {
+  cursor: pointer;
+  background-color: #2c7a5e;
+}
+
+/* Utilities */
+.error {
+  border: 2px solid #ff0000 !important;
+}
+
+.error::placeholder {
+  color: #ff0000;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .new-task-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .new-task-container input {
+    width: 100%;
+  }
+
+  .new-task-button {
+    width: 100%;
+    margin-left: 0;
+    padding: 14px;
+  }
+
+  .task-container {
+    margin-top: 24px;
+  }
+}
